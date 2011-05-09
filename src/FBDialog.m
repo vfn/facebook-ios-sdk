@@ -586,8 +586,8 @@ BOOL FBIsDeviceIPad() {
   [_spinner startAnimating];
   _spinner.center = _webView.center;
 
-  UIWindow* window = [UIApplication sharedApplication].keyWindow;
-  if (!window) {
+  UIWindow* window = nil;
+  if ([[UIApplication sharedApplication].windows count]) {
     window = [[UIApplication sharedApplication].windows objectAtIndex:0];
   }
 
